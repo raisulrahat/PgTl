@@ -1,0 +1,227 @@
+:root {
+    --background-color: black;
+    --text-color: white;
+    --header-bg-color: #111;
+    --footer-bg-color: #222;
+    --button-bg-color: red; /* Button always red */
+}
+
+[data-theme="light"] {
+    --background-color: white;
+    --text-color: black;
+    --header-bg-color: #f1f1f1;
+    --footer-bg-color: #e1e1e1;
+    --button-bg-color: red; /* Keep button always red */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: var(--header-bg-color);
+    padding: 10px;
+}
+
+.header-container {
+    display: flex; /* Use flexbox to align items */
+    justify-content: flex-start; /* Align items to the start */
+    align-items: center; /* Align items vertically in the center */
+    max-width: 1200px; /* Restrict the maximum width */
+    margin: 0 auto; /* Centering */
+}
+
+.header img {
+    height: 55px; /* Logo height */
+    margin-right: 20px; /* Space between the logo and the links */
+}
+
+.toggle-dark {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Push the toggle switch to the right */
+}
+
+/* Simple Square Box Switch Style */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ff0000;
+    transition: 0.4s;
+    border-radius: 5px; /* Slightly rounded corners */
+}
+
+/* Default - Box */
+.slider:before {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 18px;
+    background-color: white;
+    border: 1px solid #999;
+    border-radius: 5px; /* Rounded corners for the box */
+    transition: 0.4s;
+}
+
+/* Checked (Box moves right) */
+input:checked + .slider {
+    background-color: #cccccc; /* Background when checked */
+}
+
+input:checked + .slider:before {
+    transform: translateX(20px); /* Move box to the right */
+}
+
+/* Navigation styles */
+.nav-links {
+    margin-right: 20px; /* Adjust space */
+}
+
+/* Navigation styles */
+.nav-links {
+    margin-left: 0; /* Remove margin-left to place it right beside the logo */
+}
+
+.nav-links ul {
+    list-style: none;
+    display: flex; /* Use flex to arrange items horizontally */
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    margin: 0 10px; /* Space between links */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 5px 10px; /* Padding for better clickability */
+}
+
+.nav-links a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Main content */
+.main-content {
+    text-align: center;
+    padding: 10px;
+}
+
+.main-content h5 {
+    color: #bbb;
+    margin-top: 10px;
+}
+
+.main-content p {
+    text-align: left; /* Left-align all paragraph text */
+    margin: 16px;
+    font-size: 16px;
+}
+
+.subtitle {
+    background-color: gray;
+    color: white;
+    margin-top: 10px;
+    padding: 10px;
+    text-align: left;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+/* Button styles */
+.button {
+    text-decoration: none;
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: var(--button-bg-color); /* Always red */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    transition: box-shadow 0.3s;
+}
+
+.button:hover {
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+}
+
+/* Footer styles */
+.footer {
+    background-color: var(--footer-bg-color);
+    padding: 20px;
+    text-align: left;
+}
+
+.footer p {
+    font-size: 14px;
+    color: #888;
+}
+
+/* Search bar styles */
+.search-bar {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.search-bar input {
+    padding: 10px;
+    width: 200px; /* Set width for the search bar */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.search-bar button {
+    padding: 10px;
+    background-color: var(--button-bg-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+.search-bar button:hover {
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+}
+
+@media (min-width: 769px) {
+    .button {
+        width: auto; /* Revert to default width on larger screens */
+    }
+
+    .search-bar input {
+        width: 200px; /* Set a specific width for larger screens */
+    }
+
+    .nav-links ul {
+        flex-direction: row; /* Horizontal layout on larger screens */
+    }
+
+    .nav-links li {
+        margin: 0 10px; /* Space between links */
+    }
+}

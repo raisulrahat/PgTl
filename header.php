@@ -1,13 +1,7 @@
-<!-- header.php --><head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="PgTl - Enjoy Free Bangla Manga, Manhwa, and Comics – Read Online Now at Bangla Comik (Bcomik)">
-    <title>Pentagon Translator</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
+<!-- header.php -->
 <header class="header">
     <div class="header-container">
-        <a href="homepage.html" class="logo">
+        <a href="index.php" class="logo">
             <img src="assets/logo/logo.png" alt="Logo">
         </a>
         <nav class="nav-links">
